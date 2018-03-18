@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+// @import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+
+
+
+
+
+/* 
+01-Settings – used with preprocessors and contain font, colors definitions, etc.
+*/
+@import './01-settings/fonts';
+@import './01-settings/settings';
+
+
+/* 
+02-Tools – globally used mixins and functions.
+*/
+// @import './02-tools/mixins';
+
+/* 
+03-Generic – reset and/or normalize styles, box-sizing definition, framework "bootstrap", etc. 
+*/
+
+@import './03-generic/font-awesome';
+@import './03-generic/foundation';
+@import './03-generic/slick';
+@import './03-generic/slick-theme';
+/* 
+04-Elements – styling for bare HTML elements (like H1, A, etc.). 
+*/
+@import './04-elements/html';
+@import './04-elements/body';
+// @import './04-elements/input';
+/* 
+05-Objects – class-based selectors which define undecorated design patterns,
+*/
+@import './05-objects/_o-left-column';
+@import './05-objects/_o-right-column';
+@import './05-objects/_o-info-container';
+@import './05-objects/_o-wrap';
+@import './05-objects/_o-content';
+@import './05-objects/_o-main-wrap';
+@import './05-objects/_o-img-flex';
+@import './05-objects/_o-gallery';
+
+
+
+/* 
+06-Components – specific UI components
+*/
+@import './06-components/_c-main-nav';
+@import './06-components/_c-main-logo';
+@import './06-components/_c-img-bg';
+@import './06-components/_c-list';
+@import './06-components/_c-inline-form';
+@import './06-components/_c-bar';
+@import './06-components/_c-slider';
+@import './06-components/_c-details';
+@import './06-components/_c-img-thumb';
+@import './06-components/_c-main-slider';
+
+/* 
+07-Trumps – utilities and helper classes with ability to override
+*/
+@import './07-trumps/helper';
+@import './07-trumps/override';
+
+

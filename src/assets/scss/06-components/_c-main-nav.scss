@@ -1,0 +1,39 @@
+.c-main-nav {
+    // height: 20px;
+    @include breakpoint(large) {
+        height: 70px;
+    }
+    &__list {
+
+    }
+     &__item {
+         text-align: center;
+
+         &.active {
+             a {
+                background: transparent;
+                color: $black;
+             }
+         }
+         > a {
+            padding: 0.75rem 0;
+           
+            color: lighten($black, 60);
+            font-size: 20px;
+            @include breakpoint(large) {
+                padding: 2rem 0;
+                font-size: 30px;
+                &:hover {
+                    color: lighten($black, 30);
+                }
+            }
+         }
+        &:first-of-type {
+            // text-align: left;
+        }
+         &:last-of-type {
+            // text-align: right;
+         }
+         
+     }
+}

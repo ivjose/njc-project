@@ -1,0 +1,105 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation for Sites</title>
+  <link rel="stylesheet" href="{{root}}assets/css/app.css">
+</head>
+
+<body>
+
+  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+
+
+  <main class="o-main-wrap">
+
+    <div class="o-main-wrap__left">
+      {{> body}}
+    </div>
+
+    <div class="o-main-wrap__right text-left">
+      <div class="c-bar">
+        <ul class="c-bar__menu">
+          <li>
+            <h4 class="c-bar__title">The 8th Avenue</h4>
+          </li>
+          <li>
+            <a id="js-slide-open" href="javascript:;" class="c-bar__toggle js-slide-open"></a>
+          </li>
+          <li>
+            <a href="#" class="c-bar__status js-slide-open">info</a>
+          </li>
+        </ul>
+        <div class="c-bar__content">
+          {{> side-content}}
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <a href="index.html"  class="c-main-logo c-main-logo--show-nav ">
+    <img src="{{root}}assets/img/NJC-Logo.svg" alt="">
+  </a>
+
+  <script src="{{root}}assets/js/app.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#toggle-sidebar, .c-bar__status').on('click', function () {
+        $('.o-wrap__left, .o-wrap__right').toggleClass('open')
+        $('#toggle-sidebar').toggleClass('left')
+
+        if ($('#toggle-sidebar').hasClass("left")) {
+          //do something it does have the protected class!
+
+          $('.c-bar__status').text('close')
+        } else {
+          $('.c-bar__status').text('Info')
+        }
+      });
+    });
+
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.js-slide-open').on('click', function () {
+        $('.o-main-wrap, .c-bar__toggle, .c-bar__status').toggleClass('open')
+
+        if ($('.c-bar__toggle').hasClass("open")) {
+          //do something it does have the protected class!
+
+          $('.c-bar__status').text('close')
+        } else {
+          $('.c-bar__status').text('Info')
+        }
+
+      });
+    });
+
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $('.c-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        centerMode: true,
+        adaptiveHeight: true
+      });
+    });
+  </script>
+</body>
+
+</html>

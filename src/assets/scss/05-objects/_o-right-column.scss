@@ -1,0 +1,143 @@
+.o-right-column {
+    padding: 0 20px;
+    color: $primary-color;
+    padding-top: 10px;
+    @include breakpoint(large) {
+        padding-left: 100px;
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+
+    
+    &--pink {
+        
+        background-color: #EAC2B5;
+        color: #2a4c8c;
+        label {
+            color: #2a4c8c;
+        }
+        .c-inline-form {
+            border-color:  #2a4c8c;
+        }
+        .button.hollow {
+            border-color: #2a4c8c;
+            color:  #2a4c8c
+        }
+        @include breakpoint(large) {
+           
+            position: relative;
+            &::before {
+                content: "";
+                background-color: #EAC2B5;
+                position: absolute; 
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+        @include breakpoint(medium down) {
+            &:before {
+                content: "";
+                background-color: #EAC2B5;
+                position: fixed; 
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+    }
+    &--orange {
+        @include breakpoint(large) {
+            background-color: #c94928;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: #c94928;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+        @include breakpoint(medium down) {
+            &:before {
+                content: "";
+                background-color: #c94928;
+                position: fixed;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+    }
+    &--dark {
+        color: #3f69b8;
+   
+        @include breakpoint(large) {
+            background-color: #2f292a;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: #2f292a;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+        @include breakpoint(medium down) {
+            &:before {
+                content: "";
+                background-color: #2f292a;
+                position: fixed;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+    }
+    &--blue-green {
+        color: #c6b89b;
+        .c-list__item:before {
+            background: #c6b89b;
+        }
+        @include breakpoint(large) {
+            background-color: #2a5f63;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: #2a5f63;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+        @include breakpoint(medium down) {
+            &:before {
+                content: "";
+                background-color: #2a5f63;
+                position: fixed;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                left: 0;
+            }
+        }
+    }
+}

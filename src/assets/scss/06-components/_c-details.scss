@@ -1,0 +1,35 @@
+.c-details {
+    &__dl {
+        color: $white;
+        text-decoration: underline;
+        &:hover {
+            color: $white;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        padding: 20px;
+
+      
+        @include breakpoint(medium) {
+            padding: 30px;
+            font-size: 20px;
+            // All CSS in here goes inside the media query
+          }
+    }
+    &__text {
+        margin-bottom: 0;
+    }
+    &__qoutes,
+    &__author  {
+        font-style: italic;
+        font-size: 16px;
+    } 
+    &__qoutes {
+        margin-bottom: 0;
+    }
+    &__author {
+        padding-left: 16px;
+        margin-bottom: 20px;
+    }
+}

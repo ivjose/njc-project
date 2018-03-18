@@ -1,0 +1,25 @@
+.c-img-bg {
+    position: absolute;
+    height: 100vh;
+    left: 50%;
+    top: 0;
+    padding-top: 70px;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    &--fixed {
+        position: fixed
+    }
+    &--half {
+        width: 50%;
+        top: 0;
+        padding: 70px 0 0;
+        left: 0;
+        z-index: -1;
+        @include breakpoint(medium) {
+            transform: none;
+            // All CSS in here goes inside the media query
+          }
+    }
+}
+

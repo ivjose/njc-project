@@ -1,0 +1,37 @@
+.c-main-logo {
+  
+
+    margin-left: 20px;
+    display: none;
+    &--show {
+
+        display: block;
+        position: fixed;
+        z-index: 9;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 15px;
+        width: 70px;
+    }
+    &--show-nav {
+
+        display: block;
+        position: fixed;
+        z-index: 9;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 60px;
+        width: 70px;
+    }
+    @include breakpoint(large) {
+        width: 100px;
+        display: block;
+        position: fixed;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    
+}

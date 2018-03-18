@@ -1,0 +1,24 @@
+.c-list {
+    padding-left: 16px;
+    &__title {
+      list-style: none;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin-left: -16px;
+      margin-bottom: 10px;
+    }
+    &__item {
+      list-style: none;
+      position: relative;
+      &:before {
+        content: "";
+        // background: black;
+        width: 11px;
+        height: 1px;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+      }
+    }
+  }
+  

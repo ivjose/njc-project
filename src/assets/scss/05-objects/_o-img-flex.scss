@@ -1,0 +1,17 @@
+.o-img-flex {
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    height: 100%;
+    margin-top: -46px;
+    justify-content: center;
+    padding: 0 20px;
+    @include breakpoint(medium) {
+        padding: 0 70px;
+        margin-top: -82px;
+    }
+    img {
+        margin: 0 auto;
+        width: 700px;
+    }
+}

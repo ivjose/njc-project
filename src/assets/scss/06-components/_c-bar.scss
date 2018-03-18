@@ -1,0 +1,226 @@
+.c-bar {
+  @include breakpoint(medium down) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: $primary-color;
+    overflow: auto;
+
+    .o-main-wrap.open & {
+      top: 0;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: flex;
+    position: relative;
+    // width: 50px;
+    background-color: $primary-color;
+    // padding-left: 10px;
+    height: 100%;
+    // All CSS in here goes inside the media query
+  }
+  &__menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column nowrap;
+      width: 80px;
+      height: 100%;
+      margin: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      // All CSS in here goes inside the media query
+    }
+    @include breakpoint(xxlarge) {
+      padding-top: 30px;
+      padding-bottom: 70px;
+      // All CSS in here goes inside the media query
+    }
+    > li {
+      list-style-type: none;
+      // color: white;
+      display: inline-block;
+      &:last-of-type,
+      &:first-of-type {
+        width: 100px;
+        @include breakpoint(medium) {
+          width: auto;
+        }
+      }
+    }
+
+  }
+  &__content {
+    width: 100%;
+    display: none;
+    // overflow-y: auto;
+    .o-main-wrap.open & {
+      display: block;
+    }
+    @include breakpoint(medium) {
+      .o-main-wrap.open & {
+        display: flex;
+      }
+      display: flex;
+      overflow: auto;
+      // All CSS in here goes inside the media query
+    }
+    .orbit {
+      margin-bottom: 30px;
+    }
+
+    .grid-container {
+      width: 100%;
+      color: $white;
+      padding-top: 20px;
+
+      @include breakpoint(medium) {
+        // overflow-y: auto;
+      }
+    }
+  }
+  &__toggle {
+    position: relative;
+    padding: 8px;
+    display: none;
+    outline: 0;
+    text-align: center;
+    margin-top: -5px;
+
+    @include breakpoint(medium) {
+      display: block;
+      padding: 20px;
+      margin-top: 0;
+      margin-left: 0;
+    }
+    &::before {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      // border: inset 15px;
+      content: "";
+      border: inset 10px;
+
+      border-left-style: solid;
+      border-color: transparent transparent $white;
+      margin-top: -5px;
+
+      vertical-align: middle;
+
+      @include breakpoint(medium) {
+        margin-top: 0;
+        border: inset 15px;
+        border-color: transparent $white transparent transparent;
+        border-left-width: 0;
+      }
+    }
+    &.open {
+      &::before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        content: "";
+        border-left-width: 0;
+        border: inset 10px;
+        border-top-style: solid;
+        border-bottom-width: 0;
+        border-color: $white transparent transparent;
+        margin-top: 10px;
+
+        @include breakpoint(medium) {
+          margin-top: 0;
+          margin-left: 0;
+          border: inset 15px;
+          border-right-width: 0;
+          border-color: transparent transparent transparent $white;
+        }
+      }
+    }
+
+    // transform: rotate(90deg)
+  }
+  &__title,
+  &__status {
+    // font-weight: bold;
+    white-space: nowrap;
+    display: block;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+    @include breakpoint(medium) {
+      transform: rotate(90deg);
+      font-size: 24px;
+    }
+    @include breakpoint(xlarge) {
+      transform: rotate(90deg);
+      font-size: 28px;
+    }
+    @include breakpoint(xxlarge) {
+      transform: rotate(90deg);
+      font-size: 45px;
+    }
+  }
+  &__title {
+    text-align: left;
+  }
+  &__status {
+    text-transform: uppercase;
+    text-align: right;
+
+    @include breakpoint(medium down) {
+      &.open {
+        &::before {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          content: "";
+          border-left-width: 0;
+          border: inset 6px;
+          border-top-style: solid;
+          border-bottom-width: 0;
+          border-color: $white transparent transparent;
+          margin-top: -2px;
+        }
+      }
+      &::before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        // border: inset 15px;
+        content: "";
+        border: inset 6px;
+        border-left-style: solid;
+        border-color: transparent transparent $white;
+        margin-top: -8px;
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    @include breakpoint(medium) {
+      transform: rotate(90deg);
+    }
+  }
+}

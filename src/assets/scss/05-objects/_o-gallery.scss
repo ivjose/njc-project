@@ -1,0 +1,7 @@
+.o-gallery {
+    padding: 50px 50px 0;
+    @include breakpoint(medium) {
+        padding: 50px 100px 0;
+        // All CSS in here goes inside the media query
+      }
+}

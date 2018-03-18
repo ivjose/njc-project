@@ -1,0 +1,15 @@
+// .orbit-image ,
+.orbit-wrapper,
+.orbit-slide,
+.orbit-container{
+
+    height: auto!important;
+}
+.orbit-previous, .orbit-next {
+    color: lighten($black, 30)
+}
+
+.orbit-previous:hover, .orbit-next:hover, .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
+    background-color: transparent;
+    color: $black;
+}

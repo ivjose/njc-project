@@ -1,0 +1,38 @@
+.c-inline-form {
+    display: table;
+    width:  100%;
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 0;
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
+    &__wrap {
+        // vertical-align: top;
+        display: table-cell;
+        vertical-align: middle;
+        &.top {
+            vertical-align: top;
+        }
+        &:first-of-type {
+            width: 1%;
+        }
+        [type="text"],
+        [type="password"],
+        [type="date"],
+        [type="datetime"],
+        [type="datetime-local"],
+        [type="month"],
+        [type="week"],
+        [type="email"],
+        [type="number"],
+        [type="search"],
+        [type="tel"],
+        [type="time"],
+        [type="url"],
+        [type="color"],
+        textarea {
+          margin-bottom: 0;
+       
+        }
+    }
+}

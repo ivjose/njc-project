@@ -1,0 +1,102 @@
+.c-img-thumb {
+    display: block;
+    margin: 0 auto;
+    &--500 {
+        max-width: 500px;
+    }
+    &--450 {
+        max-width: 450px;
+    }
+    &--300 {
+        max-width: 300px;
+        @include breakpoint(large) {
+           padding-top: 100px;
+        }
+    }
+    &__wrap {
+        position: relative;
+        overflow: hidden;
+        display: block;
+      
+       &::before {
+        transition: all 0.3s ease;
+        background-color: transparent;
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+       }
+        &:hover {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: block;
+            
+            }
+            .c-img-thumb__title,
+            .c-img-thumb__text {
+                display: block;
+            }
+        }
+
+        &--green {
+            &:hover {
+                &::before {
+                       
+                    background-color:$primary-color;
+                }
+                .c-img-thumb__title,
+                .c-img-thumb__text {
+                    color: $white;
+                }
+            }
+        }
+        &--lime {
+            &:hover {
+                &::before {
+                       
+                    background-color: #c6b89b;
+                }
+                .c-img-thumb__title,
+                .c-img-thumb__text {
+                    color: red;
+                }
+            }
+        }
+        &--pink {
+            &:hover {
+                &::before {
+                       
+                    background-color: #EAC2B5;
+                }
+                .c-img-thumb__title,
+                .c-img-thumb__text {
+                    color: #3f69b8;
+                }
+            }
+        }
+    }
+    &__title, 
+    &__text {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: $white;
+
+        @include breakpoint(large) {
+            font-size: 24px;
+        }
+    }
+    &__title {
+        top: 0;
+    }
+    &__text {
+        bottom: 0;
+    }
+}

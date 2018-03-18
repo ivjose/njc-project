@@ -1,0 +1,58 @@
+.o-left-column {
+    padding: 0 16px;
+    // background-color: red;
+    &--dark {
+        // background-color: red!important;
+        @include breakpoint(medium down) { 
+            .c-main-nav__item {
+                &.active {
+                    > a {
+                       
+                        color:  #3f69b8;
+                    }
+                }
+                > a {
+                    color: darken($white, 0);
+                }
+            }
+        }
+        
+    }
+    &--blue-green {
+        // background-color: red;
+        @include breakpoint(medium down) { 
+            .c-main-nav__item {
+                &.active {
+                    > a {
+                       
+                        color:  #c6b89b;
+                    }
+                }
+                > a {
+                    color: darken($white, 0);
+                }
+            }
+        }
+    }
+    &--pink {
+        @include breakpoint(medium down) { 
+            .c-main-nav__item {
+                &.active {
+                    > a {
+                       
+                        color:  #2a4c8c;
+                    }
+                }
+                > a {
+                    color: darken($white, 0);
+                }
+            }
+        }
+    }
+}
+
+// .o-right-column--blue-green {
+//     & ~ .o-left-column {
+//         background-color: red;
+//     }
+// }
