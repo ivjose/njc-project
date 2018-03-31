@@ -1,0 +1,8 @@
+.o-list-inline {
+  display: table;
+  width: 100%;
+  &__item {
+    display: table-cell;
+    width: 50%;
+  }
+}

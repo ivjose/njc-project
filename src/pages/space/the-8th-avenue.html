@@ -1,12 +1,31 @@
 ---
 layout: toggle-slider
 ---
-        {{> c-main-nav}}
- 
+{{> c-main-nav}}
 
-        <img class="c-img-bg " data-interchange="[{{root}}assets/img/line-black.svg, small], [{{root}}assets/img/Line-green.svg, large]"
-            alt="">
-        <div class="o-img-flex">
-                <img  src="{{root}}assets/img/assets/asset-5.jpg" alt="Space">
-        </div>
- 
+<img class="c-img-bg " data-interchange="[{{root}}assets/img/line-black.svg, small], [{{root}}assets/img/Line-green.svg, large]" alt="">
+
+
+
+<div class="o-img-flex">
+
+  <!-- <a href="#" class="o-img-flex__item reveal-modal js-modal-open" data-open="modal-gallery">
+
+    <img src="{{root}}assets/img/assets/asset-5.jpg" />
+  </a> -->
+
+
+  {{>img-slider-lg}}
+
+</div>
+
+<div class="reveal c-reveal" id="modal-gallery" data-reveal>
+
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+
+      {{>modal-slider}}
+
+</div>

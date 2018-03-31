@@ -3,6 +3,7 @@
 
     margin-left: 20px;
     display: none;
+    transition: width 0.2s linear;
     &--show {
 
         display: block;
@@ -11,7 +12,11 @@
         bottom: 0;
         left: 0;
         margin-bottom: 15px;
-        width: 70px;
+        width: 100px;
+        &.scroll {
+            width: 70px;
+            
+        }
     }
     &--show-nav {
 
@@ -24,7 +29,7 @@
         width: 70px;
     }
     @include breakpoint(large) {
-        width: 100px;
+        
         display: block;
         position: fixed;
         z-index: 10;
@@ -32,6 +37,13 @@
         left: 0;
         margin-bottom: 20px;
         margin-left: 30px;
+        width: 150px;
+   
+        &.scroll {
+            width: 90px;
+            
+        }
     }
+    
     
 }

@@ -8,5 +8,6 @@ import Foundation from 'foundation-sites';
 // the line below
 //import './lib/foundation-explicit-pieces';
 import './lib/slick';
-
+// import './lib/venobox';
+import './lib/custom';
 $(document).foundation();

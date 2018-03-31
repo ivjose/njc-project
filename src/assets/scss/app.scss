@@ -1,8 +1,7 @@
 @charset 'utf-8';
 
 // @import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+
 
 
 
@@ -15,7 +14,8 @@
 @import './01-settings/fonts';
 @import './01-settings/settings';
 
-
+@import 'foundation';
+@import 'motion-ui';
 /* 
 02-Tools – globally used mixins and functions.
 */
@@ -24,11 +24,11 @@
 /* 
 03-Generic – reset and/or normalize styles, box-sizing definition, framework "bootstrap", etc. 
 */
-
-@import './03-generic/font-awesome';
 @import './03-generic/foundation';
+@import './03-generic/font-awesome';
 @import './03-generic/slick';
 @import './03-generic/slick-theme';
+// @import './03-generic/venobox';
 /* 
 04-Elements – styling for bare HTML elements (like H1, A, etc.). 
 */
@@ -46,7 +46,7 @@
 @import './05-objects/_o-main-wrap';
 @import './05-objects/_o-img-flex';
 @import './05-objects/_o-gallery';
-
+@import './05-objects/_o-list-inline';
 
 
 /* 
@@ -62,6 +62,13 @@
 @import './06-components/_c-details';
 @import './06-components/_c-img-thumb';
 @import './06-components/_c-main-slider';
+@import './06-components/_c-reveal';
+@import './06-components/_c-slide-count';
+@import './06-components/_c-list-hover';
+@import './06-components/_c-back-top';
+@import './06-components/_c-njc';
+@import './06-components/_c-orbit'; 
+@import './06-components/_c-from'; 
 
 /* 
 07-Trumps – utilities and helper classes with ability to override

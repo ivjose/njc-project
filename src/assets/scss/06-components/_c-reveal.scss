@@ -1,0 +1,21 @@
+.c-reveal {
+    background-color: $primary-color;
+    min-height: 100%;
+    height: initial;
+    width: 100%;
+    top: 0!important;
+    margin: 0;
+    max-width: none;
+    padding-bottom: 80px;
+    
+    &__modal {
+
+    }
+    .close-button {
+        color: darken($white, 10);
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}

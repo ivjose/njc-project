@@ -1,0 +1,60 @@
+.c-list-hover {
+  @include breakpoint(medium only) {
+    width: 50%;
+  }
+  @include breakpoint(large) {
+    width: 100%;
+  }
+  
+  &__link {
+    color: $white;
+    &:hover,
+    &:focus {
+      color: #5881BF;
+      .c-list-hover__icon {
+        display: inline;
+      }
+    }
+    .js-sm-img-src {
+      margin: 20px auto;
+      display: none;
+    }
+    // &.active {
+    //   .c-list-hover__sm-img{
+    //     display: block;
+    //   }
+    // }
+  }
+  &__icon {
+    display: none;
+ 
+    // vertical-align: text-top;
+  }
+  &__lg-info {
+    display: none;
+    // font-size: 14px;
+    padding: 10px 0;
+    color: $white;
+    .active & {
+
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+  }
+  &__sm-img {
+    display: none;
+    .active & {
+      display: block;
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+  > li {
+    // margin-bottom: 10px;
+  }
+}

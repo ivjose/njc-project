@@ -10,6 +10,17 @@
         padding: 0 70px;
         margin-top: -82px;
     }
+    &--hide-sm {
+        display: none;
+        @include breakpoint(large) {
+            display: flex;
+        }
+    }
+    
+    &__item {
+        display: inline-block;
+        margin: 0 auto;
+    }
     img {
         margin: 0 auto;
         width: 700px;

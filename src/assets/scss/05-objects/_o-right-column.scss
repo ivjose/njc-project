@@ -79,7 +79,7 @@
         }
     }
     &--dark {
-        color: #3f69b8;
+        color: #fff;
    
         @include breakpoint(large) {
             background-color: #2f292a;
@@ -138,6 +138,17 @@
                 z-index: -1;
                 left: 0;
             }
+        }
+    }
+
+    &__wrap {
+
+        @include breakpoint(large) {
+            position: absolute;
+            overflow: auto;
+            height: 100%;
+            top: 0;
+            padding: 30px 20px 30px 0;
         }
     }
 }

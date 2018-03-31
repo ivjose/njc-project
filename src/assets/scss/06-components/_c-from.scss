@@ -1,0 +1,20 @@
+.c-from {
+  &--light {
+    @include breakpoint(large) {
+      width: 60%;
+    }
+    label {
+      color: $white;
+    }
+    .c-inline-form {
+      border-bottom-color: $white;
+    }
+    .button.hollow {
+      border-color: $white;
+      color: $white;
+    } 
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

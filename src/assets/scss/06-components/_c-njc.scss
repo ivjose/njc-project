@@ -1,0 +1,15 @@
+.c-njc {
+  padding-top: 20px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  padding-left: 10px;
+  line-height: 1;
+  @include breakpoint(large) {
+    width: 80%;
+    padding-top: 50px;
+    margin-bottom: 200px;
+    font-size: 4.6rem;
+    
+    color: $primary-color;
+  }
+}
