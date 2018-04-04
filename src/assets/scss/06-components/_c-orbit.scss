@@ -5,23 +5,43 @@
   
   &--custom {
     .orbit-previous {
-      top: 80%;
-    
+     top: 0;
+     height: 100%;
+     width: 70%;
+    // background-color: red;
+    transform: none;
+    display: none;
       @include breakpoint(large) {
-        left: -100px;
+        left: -20%;
+        display: block;
+        &:hover {
+          cursor: url(../img/left-arrow.png), auto;
+        
+        }
         .fa {
           font-size: 40px;
+          display: none;
         }
       }
       
     }
     .orbit-next {
-      top: 20%;
-     
+      top: 0;
+     height: 100%;
+     width: 70%;
+    // background-color: red;
+    transform: none;
+    display: none;
       @include breakpoint(large) {
-        right: -100px;
+        right: -20%;
+        display: block;
+        &:hover {
+          cursor: url(../img/right-arrow.png), auto;
+        
+        }
         .fa {
           font-size: 40px;
+          display: none;
         }
       }
  
@@ -30,5 +50,10 @@
   .orbit-previous,
   .orbit-next {
     cursor: pointer;
+  }
+  .orbit-figure {
+    a {
+      display: block;
+    }
   }
 }

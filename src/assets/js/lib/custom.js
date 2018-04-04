@@ -65,7 +65,7 @@ $(document).ready(function() {
       // $(this).next(".js-sm-img-src").removeClass('hide');
 
       var imgLink = $(this).attr("data-img")
-      console.log("onClick",    $(this).parent(".c-list-hover__item")) 
+      // console.log("onClick",    $(this).parent(".c-list-hover__item")) 
       $('.c-list-hover').find( '.active' ).removeClass( 'active' );
       $(this).parent('.c-list-hover__item').toggleClass('active');
       $(this).parent(".c-list-hover__item").find(".js-sm-img-src").attr('src', imgLink);
@@ -108,20 +108,18 @@ $(document).ready(function() {
   //   }
   // })
 
+
+
   $(".js-modal-open").click(function() {
 
-    // $('.c-reveal').foundation('open', function() {
-
-    // });
-
-    //Slick JS start
     var $gallery = $("#js-modal-slider");
     var slideCount = null;
+   
 
     $gallery.on("init", function(event, slick) {
       // console.log(slick.slideCount);
       // console.log(slick, "Test");
-      console.log("fired!");
+      // console.log("fired!", slick.slideCount);
       $gallery.fadeIn(3000);
       slideCount = slick.slideCount;
       setSlideCount();
@@ -140,6 +138,7 @@ $(document).ready(function() {
     function setSlideCount() {
       var $el = $(".c-slide-count").find(".c-slide-count__total");
       $el.text(slideCount);
+      // console.log("current side", slideCount);
     }
 
     function setCurrentSlideNumber(currentSlide) {
@@ -147,7 +146,7 @@ $(document).ready(function() {
       $el.text(currentSlide + 1);
       // console.log("current", currentSlide);
     }
-    $gallery.slick({
+    $gallery.not('.slick-initialized').slick({
       dots: false,
       infinite: true,
       speed: 500,

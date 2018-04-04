@@ -7,8 +7,26 @@
 
     }
      &__item {
-         text-align: center;
-
+        //  text-align: center;
+        &:first-child,
+        &:nth-child(2), {
+            text-align: left;
+        }
+        &:last-child,
+        &:nth-child(3), {
+            text-align: right
+        }
+        &:nth-child(2), {
+            a {
+                margin-left: 15%;
+            }
+        }
+        &:nth-child(3), {
+          
+            a {
+                margin-right: 10%;
+            }
+        }
          &.active {
              a {
                 background: transparent;
