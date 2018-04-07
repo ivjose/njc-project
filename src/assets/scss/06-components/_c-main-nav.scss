@@ -34,12 +34,12 @@
              }
          }
          > a {
-            padding: 0.75rem 0;
+            padding: 0;
            
             color: lighten($black, 60);
             font-size: 20px;
             @include breakpoint(large) {
-                padding: 2rem 0;
+           
                 font-size: 30px;
                 &:hover {
                     color: lighten($black, 30);

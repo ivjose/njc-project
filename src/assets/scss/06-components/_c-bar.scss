@@ -41,6 +41,9 @@
       padding-top: 30px;
       padding-bottom: 30px;
       // All CSS in here goes inside the media query
+      .o-main-wrap.open & {
+        padding-bottom: 45px;
+      }
     }
     @include breakpoint(xxlarge) {
       padding-top: 30px;
@@ -53,12 +56,14 @@
       display: inline-block;
       &:last-of-type,
       &:first-of-type {
-        width: 100px;
+        width: 150px;
         @include breakpoint(medium) {
           width: auto;
         }
       }
     }
+
+    
 
   }
   &__content {
@@ -119,10 +124,11 @@
       vertical-align: middle;
 
       @include breakpoint(medium) {
-        margin-top: 0;
-        border: inset 15px;
-        border-color: transparent $white transparent transparent;
-        border-left-width: 0;
+        margin-left: -20px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent; 
+        
+        border-right: 15px solid $white; 
       }
     }
     &.open {
@@ -139,11 +145,16 @@
         margin-top: 10px;
 
         @include breakpoint(medium) {
-          margin-top: 0;
-          margin-left: 0;
-          border: inset 15px;
-          border-right-width: 0;
-          border-color: transparent transparent transparent $white;
+          margin-left: 0; 
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent; 
+          border-left: 15px solid $white;
+
+
+          // margin-top: 0;
+          // border: inset 15px;
+          // border-color: transparent $white transparent transparent;
+          // border-left-width: 0;
         }
       }
     }
@@ -157,7 +168,7 @@
     display: block;
     color: white;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px 22px;
     margin: 0;
     @include breakpoint(medium) {
       transform: rotate(90deg);
@@ -179,19 +190,19 @@
     text-transform: uppercase;
     text-align: right;
 
-    @include breakpoint(medium down) {
+    @include breakpoint(799px down) {
       &.open {
         &::before {
           display: inline-block;
           width: 0;
           height: 0;
           content: "";
-          border-left-width: 0;
-          border: inset 6px;
-          border-top-style: solid;
-          border-bottom-width: 0;
-          border-color: $white transparent transparent;
-          margin-top: -2px;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          
+          border-top: 8px solid $white;
+          border-bottom: none;
+          margin-right: 5px;
         }
       }
       &::before {
@@ -200,12 +211,12 @@
         height: 0;
         // border: inset 15px;
         content: "";
-        border: inset 6px;
-        border-left-style: solid;
-        border-color: transparent transparent $white;
-        margin-top: -8px;
-        margin-right: 8px;
+        border-left:  8px solid transparent;
+        border-right: 8px solid transparent;
+        
+        border-bottom: 8px solid $white;
         vertical-align: middle;
+        margin-right: 5px;
       }
     }
 
