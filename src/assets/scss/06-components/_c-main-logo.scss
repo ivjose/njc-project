@@ -28,7 +28,7 @@
         margin-bottom: 60px;
         width: 70px;
     }
-    @include breakpoint(large) {
+    @include breakpoint(800px) {
         
         display: block;
         position: fixed;

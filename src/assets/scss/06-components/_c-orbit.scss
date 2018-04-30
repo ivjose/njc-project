@@ -4,16 +4,23 @@
 
   
   &--custom {
+    &.orbit {
+      position: static;
+      z-index: 8;
+    }
     .orbit-previous {
      top: 0;
      height: 100%;
-     width: 70%;
+     width: 50% ;
     // background-color: red;
     transform: none;
     display: none;
-      @include breakpoint(large) {
-        left: -20%;
+      // @include breakpoint(medium) {
+        left: 0;
         display: block;
+           @include breakpoint(800) {
+            width: calc(50% - 40px) ;
+           }
         &:hover {
           cursor: url(../img/left-arrow.png), auto;
         
@@ -22,19 +29,24 @@
           font-size: 40px;
           display: none;
         }
-      }
+      // }
       
     }
     .orbit-next {
       top: 0;
      height: 100%;
-     width: 70%;
+     width: 50%;
     // background-color: red;
     transform: none;
     display: none;
-      @include breakpoint(large) {
-        right: -20%;
+      // @include breakpoint(medium) {
+        right: 0;
         display: block;
+        @include breakpoint(800) {
+        
+          width: calc(50% - 40px) ;
+          right: 80px;
+        }
         &:hover {
           cursor: url(../img/right-arrow.png), auto;
         
@@ -43,7 +55,7 @@
           font-size: 40px;
           display: none;
         }
-      }
+      // }
  
     }
   }

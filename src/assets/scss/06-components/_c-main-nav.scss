@@ -1,5 +1,7 @@
 .c-main-nav {
     // height: 20px;
+    position: relative;
+    z-index: 10;
     @include breakpoint(large) {
         height: 70px;
     }
@@ -38,6 +40,11 @@
            
             color: lighten($black, 60);
             font-size: 20px;
+            @include breakpoint(medium) {
+               
+                font-size: 30px;
+             
+            }
             @include breakpoint(large) {
            
                 font-size: 30px;

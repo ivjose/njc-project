@@ -131,3 +131,15 @@
   }
 }
 
+.js-modal-open {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+z-index: 10;
+margin-right: 22px;
+margin-bottom: 50px;
+  @include breakpoint(800px) {
+    margin-right: 100px;
+    margin-bottom: 10px;
+  }
+}
