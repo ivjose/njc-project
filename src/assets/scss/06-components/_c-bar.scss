@@ -168,11 +168,11 @@
     display: block;
     color: white;
     font-size: 16px;
-    padding: 10px 22px;
+    padding: 10px 8px;
     margin: 0;
     @include breakpoint(medium) {
       transform: rotate(90deg);
-      font-size: 24px;
+      font-size: 28px;
     }
     @include breakpoint(xlarge) {
       transform: rotate(90deg);
@@ -189,7 +189,14 @@
   &__status {
     text-transform: uppercase;
     text-align: right;
-
+    
+    @include breakpoint(800px) {
+      padding: 10px 4px;
+      &.open {
+        // padding: 10px 16px;
+        padding: 10px 7px;
+      }
+    }
     @include breakpoint(799px down) {
       &.open {
         &::before {

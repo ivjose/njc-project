@@ -2,6 +2,8 @@
     &__dl {
         color: $white;
         text-decoration: underline;
+        display: table;
+margin-top: -5px;
         &:hover {
             color: $white;
         }

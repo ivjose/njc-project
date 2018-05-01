@@ -4,6 +4,7 @@
     margin-left: 22px;
     display: none;
     transition: width 0.2s linear;
+    
     &--show {
 
         display: block;
@@ -13,6 +14,7 @@
         left: 0;
         margin-bottom: 22px;
         width: 100px;
+     
         &.scroll {
             width: 70px;
             
@@ -25,12 +27,19 @@
         z-index: 9;
         bottom: 0;
         left: 0;
-        margin-bottom: 60px;
+        // margin-bottom: 60px;
         width: 70px;
+        margin-bottom: 60px;
+        @include breakpoint(1024px) {
+            margin-bottom: 22px; 
+        }
     }
+    // @include breakpoint(800px) {
+
+    // }
     @include breakpoint(800px) {
         
-        display: block;
+        display: none;
         position: fixed;
         z-index: 10;
         bottom: 0;
@@ -43,6 +52,10 @@
             width: 90px;
             
         }
+    }
+    @include breakpoint(1024px) {
+        display: block;
+        margin-bottom: 22px; 
     }
     
     
