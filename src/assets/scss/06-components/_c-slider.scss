@@ -42,8 +42,8 @@
   &__img {
     // height: 90vh;
     margin: 0 auto;
-    @include breakpoint(medium) {
-      height: 100vh;
+    @include breakpoint(600) {
+      height: 90vh;
     }
   }
 }

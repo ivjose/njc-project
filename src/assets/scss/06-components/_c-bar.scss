@@ -43,11 +43,15 @@
       // All CSS in here goes inside the media query
       .o-main-wrap.open & {
         padding-bottom: 45px;
+        @include breakpoint(xxlarge) {
+          padding-bottom: 84px;
+          // All CSS in here goes inside the media query
+        }
       }
     }
     @include breakpoint(xxlarge) {
-      padding-top: 30px;
-      padding-bottom: 70px;
+      padding-top: 18px;
+      padding-bottom: 45px;
       // All CSS in here goes inside the media query
     }
     > li {
@@ -194,6 +198,7 @@
       padding: 10px 4px;
       &.open {
         // padding: 10px 16px;
+        
         padding: 10px 7px;
       }
     }
