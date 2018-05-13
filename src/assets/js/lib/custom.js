@@ -39,23 +39,39 @@ $(document).ready(function() {
 
   
 
+  
   $('.c-list-hover__link').on({
     mouseenter : function(e){
       var imgLink = $(this).attr("data-img")
 
 
-      
+
       if (imgLink) {
-      
+       
+        
         $('#js-img-src').attr('src', imgLink);
         $('#js-img-src').removeClass('hide');
         // $(this).next(".js-sm-img-src").attr('src', imgLink);
         // $(this).next(".js-sm-img-src").removeClass('hide');
+      } else {
+       $('#js-img-src').addClass('hide');
       }
     },
     mouseleave : function(e){
-      $('#js-img-src').addClass('hide');
+      var defaultImg = $('.c-list-hover__item.active').children('.c-list-hover__link').attr("data-img")
+      if (defaultImg) {
+        $('#js-img-src').attr('src', defaultImg);
+        $('#js-img-src').removeClass('hide');
+      }
+       console.log("imgLink",defaultImg);
+      // $('#js-img-src').attr('src', "");
+      // $('#js-img-src').addClass('hide');
       // $(this).closest(".js-sm-img-src").addClass('hide')
+      // $('.c-list-hover__link').parent( '.c-list-hover__item.active' ).attr("data-img")
+      // var imgStatus = $('.c-list-hover__item.active>.c-list-hover__link').attr("data-img")
+      // console.log("imgLink",imgStatus);
+      // $('#js-img-src').attr('src', imgStatus);
+
     },
     click: function(e) {
 

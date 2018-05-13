@@ -1,15 +1,17 @@
 <nav class="c-main-nav">
   <ul class="menu expanded c-main-nav__list">
-    <li class="c-main-nav__item active">
+  
+    
+    <li class="c-main-nav__item {{#ifpage 'index' 'the-8th-avenue'}} active  {{/ifpage}}">
       <a href="{{root}}index.html">Spaces</a>
-    </li>
-    <li class="c-main-nav__item">
+    </li> 
+    <li class="c-main-nav__item {{#ifpage 'about'}} active  {{/ifpage}}">
       <a href="{{root}}about.html">About</a>
     </li>
-    <li class="c-main-nav__item">
+    <li class="c-main-nav__item {{#ifpage 'services'}} active  {{/ifpage}}">
       <a href="{{root}}services.html">Services</a>
     </li>
-    <li class="c-main-nav__item">
+    <li class="c-main-nav__item {{#ifpage 'contact'}} active  {{/ifpage}}">
       <a href="{{root}}contact.html">Contact</a>
     </li>
   </ul>

@@ -104,6 +104,15 @@
   }
 }
 
+.h-dl-link {
+  line-height: 1em;
+  font-size: 12;
+  text-decoration: underline;
+  @include breakpoint(medium) {
+    font-size: 18px;
+  }
+}
+
 .map-responsive {
   overflow: hidden;
   padding-bottom: 40%;

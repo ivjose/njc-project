@@ -1,0 +1,16 @@
+.o-extra-page {
+  position: relative;
+  padding-bottom: 30px;
+
+  &__footer {
+    font-size: 14px;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 15px;
+  }
+
+}
+
+ 

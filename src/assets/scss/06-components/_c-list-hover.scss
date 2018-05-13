@@ -8,6 +8,10 @@
   
   &__link {
     color: $white;
+    // display: inline-block;
+    .active & {
+      color: #5881BF;
+    }
     &:hover,
     &:focus {
       color: #5881BF;
@@ -19,6 +23,7 @@
       margin: 20px auto;
       display: none;
     }
+ 
     // &.active {
     //   .c-list-hover__sm-img{
     //     display: block;
@@ -30,15 +35,20 @@
  
     // vertical-align: text-top;
   }
+ 
   &__lg-info {
     display: none;
     // font-size: 14px;
     padding: 10px 0;
     color: $white;
     .active & {
-
+      color: $white;
       @include breakpoint(large) {
         display: block;
+      }
+      @include breakpoint(xxlarge) {
+        display: block;
+        width: 80%;
       }
     }
   }

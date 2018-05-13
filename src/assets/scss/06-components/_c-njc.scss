@@ -2,14 +2,16 @@
   padding-top: 20px;
   margin-bottom: 50px;
   font-size: 2rem;
-  padding-left: 10px;
+ 
   line-height: 1;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 1px #465339;
   @include breakpoint(large) {
     width: 80%;
     padding-top: 50px;
     margin-bottom: 200px;
     font-size: 4.6rem;
     
-    color: $primary-color;
+   
   }
 }
