@@ -1,14 +1,21 @@
 .o-extra-page {
   position: relative;
-  padding-bottom: 30px;
-
+  padding-bottom: 50px;
+  @include breakpoint(large) {
+    padding-bottom: 150px;
+  }
   &__footer {
     font-size: 14px;
     z-index: 3;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     margin-bottom: 15px;
+    margin-right: 20px;
+    @include breakpoint(medium) {
+      // padding: 0;
+      right: 50%;
+   }
   }
 
 }

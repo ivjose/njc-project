@@ -1,7 +1,7 @@
 .c-from {
   &--light {
     @include breakpoint(large) {
-      width: 60%;
+      // width: 60%;
     }
     label {
       color: $white;

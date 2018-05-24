@@ -1,9 +1,9 @@
 .c-list-hover {
   @include breakpoint(medium only) {
-    width: 80%;
+    // width: 80%;
   }
   @include breakpoint(large) {
-    width: 80%;
+    // width: 80%;
   }
   
   &__link {
@@ -48,7 +48,7 @@
       }
       @include breakpoint(xxlarge) {
         display: block;
-        width: 80%;
+        // width: 80%;
       }
     }
   }
