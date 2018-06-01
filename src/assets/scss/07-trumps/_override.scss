@@ -18,3 +18,19 @@
     padding: 22px;
  
 }
+
+.accordion-title {
+    line-height: inherit;
+}
+
+.accordion-content {
+    padding : 0;
+    .is-active & { 
+        color: #5881BF;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+ 

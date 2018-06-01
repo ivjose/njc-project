@@ -6,12 +6,17 @@
     // width: 80%;
   }
   
+  
   &__link {
     color: $white;
-    // display: inline-block;
-    .active & {
+    // display: block;
+    // display: inline; 
+    .accordion-item.is-active &  {
       color: #5881BF;
+      
     }
+
+    
     &:hover,
     &:focus {
       color: #5881BF;
@@ -19,10 +24,8 @@
         display: inline;
       }
     }
-    .js-sm-img-src {
-      margin: 20px auto;
-      display: none;
-    }
+ 
+ 
  
     // &.active {
     //   .c-list-hover__sm-img{
@@ -39,10 +42,11 @@
   &__lg-info {
     display: none;
     // font-size: 14px;
-    padding: 10px 0;
+    // padding: 10px 0;
     color: $white;
-    .active & {
-      color: $white;
+    .is-active & {
+      // color: $white;
+      color: #5881BF;
       @include breakpoint(large) {
         display: block;
       }
@@ -53,8 +57,10 @@
     }
   }
   &__sm-img {
-    display: none;
-    .active & {
+    display: none; 
+    width: 100%;
+    max-width: 400px;
+    .is-active & {
       display: block;
       @include breakpoint(large) {
         display: none;

@@ -13,6 +13,8 @@
            padding-top: 100px;
         }
     }
+
+    
     &__wrap {
         position: relative;
         overflow: hidden;
@@ -43,6 +45,16 @@
         }
 
         &--green {
+            &.hover {
+                &::before {
+                       
+                    background-color:$primary-color;
+                }
+                .c-img-thumb__title,
+                .c-img-thumb__text {
+                    color: $white;
+                }  
+            }
             &:hover {
                 &::before {
                        
@@ -67,6 +79,16 @@
             }
         }
         &--pink {
+            &.hover {
+                &::before {
+                       
+                    background-color: #EAC2B5;
+                }
+                .c-img-thumb__title,
+                .c-img-thumb__text {
+                    color: #3f69b8;
+                }
+            }
             &:hover {
                 &::before {
                        

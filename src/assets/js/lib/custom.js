@@ -38,8 +38,29 @@ $(document).ready(function() {
   });
 
   
-
+//  $('#img-lg-01').hover(function() { 
+//   $('#img-sm-01').fadeOut( 100 );
+//   $('#img-sm-01').fadeIn( 500 );
+// });
   
+
+$( '#img-lg-01' ).hover(
+  function() {
+    $( '#img-sm-01' ).addClass( "hover" );
+  }, function() {
+    $( '#img-sm-01' ).removeClass( "hover" );
+  }
+);
+
+
+
+$( '#img-lg-02' ).hover(
+  function() {
+    $( '#img-sm-02' ).addClass( "hover" );
+  }, function() {
+    $( '#img-sm-02' ).removeClass( "hover" );
+  }
+);
   $('.c-list-hover__link').on({
     mouseenter : function(e){
       var imgLink = $(this).attr("data-img")
@@ -83,8 +104,11 @@ $(document).ready(function() {
       var imgLink = $(this).attr("data-img")
       // console.log("onClick",    $(this).parent(".c-list-hover__item")) 
       $('.c-list-hover').find( '.active' ).removeClass( 'active' );
-      $(this).parent('.c-list-hover__item').toggleClass('active');
-      $(this).parent(".c-list-hover__item").find(".js-sm-img-src").attr('src', imgLink);
+console.log( "Check",$(e.target),$(this).closest('.js-sm-img-src'), imgLink)
+      // $(this).addClass('active');
+
+      // $(this).parent('.c-list-hover__item').addClass('active');
+      $(this).parent(".accordion-item").find(".js-sm-img-src").attr('src', imgLink);
     }
 })
 
