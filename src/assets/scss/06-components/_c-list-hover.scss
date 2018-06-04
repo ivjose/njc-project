@@ -47,6 +47,9 @@
     .is-active & {
       // color: $white;
       color: #5881BF;
+      @include breakpoint(medium down) {
+        display: block;
+      }
       @include breakpoint(large) {
         display: block;
       }
